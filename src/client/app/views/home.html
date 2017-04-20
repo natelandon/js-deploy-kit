@@ -1,0 +1,12 @@
+<h1>Movies:</h1>
+<div class ='row' ng-repeat="m in vm.movies">
+  <div class='col-xs-12'><a class='btn btn-primary' href="/editMovie/{{m._id}}">Edit</a> <a class='btn btn-primary' ng-click="vm.deleteMovie(m._id)">Delete</a>
+ {{m.title}}
+ {{m.genre}}
+  </div>
+
+
+</div>
+<div class ='row panel-body' >
+<a class='btn btn-primary' href="/addMovie">Add Movie</a>
+</div>

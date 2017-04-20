@@ -1,0 +1,70 @@
+<!--
+  **NOTE:** This is a template for index.html.
+  It uses ejs and htmlWebpackPlugin to generate a different index.html for each environment.
+  htmlWebpackPlugin will dynamically add references to the scripts and styles that it bundles
+  to this file. The generated bundles have hash-based filenames,
+  so it's necessary to add the references dynamically.
+  For more info on ejs, see http://www.embeddedjs.com/.
+  For examples of using it with htmlWebpackPlugin,
+  see https://github.com/jaketrent/html-webpack-template/blob/master/index.ejs
+  -->
+  <!DOCTYPE html>
+<html lang="en" >
+<head>
+    <!--
+    The htmlWebpackPlugin will parse the logic below so that trackJS is only added to the production version of index.html (since only webpack.config.prod.js provides the trackJS token)
+    This is an example of how to add features to index.html for only one environment.
+   -->
+  <meta charset="UTF-8">
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <% if (htmlWebpackPlugin.options.trackJSToken) { %>
+  <!-- BEGIN TRACKJS -->
+  <script type="text/javascript">window._trackJs = { token: '<%= htmlWebpackPlugin.options.trackJSToken%>' };</script>
+  <script type="text/javascript" src="https://cdn.trackjs.com/releases/current/tracker.js"></script>
+  <!-- END TRACKJS -->
+  <% } %>
+
+</head>
+<!-- This file is where you build the Layout. This file is the main site wrapper
+     for the modules you will load --->
+<body>
+  <header>
+      <div>
+          <a class="headerlogo" href="index.html">
+              <img src="images/film.png" />
+          </a>
+          <span id="headername"><%= htmlWebpackPlugin.options.fullTitle %></span>
+          <input type="search" class="searchbox" placeholder="Search our store" />
+      </div>
+      <nav class="navbar-background">
+          <ul>
+              <!-- Build the Navigation Bar for your wep page here --->
+            <li><a class="navlink" href="#">Home</a></li>
+
+          </ul>
+      </nav>
+  </header>
+  <div class='row' >
+    <div class='col-xs-12'>
+    <img src="images/movielogo.png" />
+    </div>
+
+    <div class='col-xs-12'ng-app="movieApp">
+      <ui-view class='col-xs-6'>
+
+      </ui-view>
+      <div class='col-xs-6'>
+
+      </div>
+    </div>
+
+
+    </div>
+
+  </div>
+
+  <footer>
+    <!-- put your footer Here --->@CoderCamps 2017 : MIT
+  </footer>
+</body>
+</html>
