@@ -1,3 +1,4 @@
+/** This is disables error in eslint for the next parameter in the error route below */
 /* eslint-disable no-unused-vars */
 import 'babel-polyfill';
 import express from 'express';
@@ -7,42 +8,36 @@ import open from 'open';
 import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
 import methodOverride from 'method-override';
-import mongoose from 'mongoose';
-//import other libs
+
+//import other routes
 import moviesRoute from '../src/server/routes/movie';
 import {default as log} from '../src/server/core/logger';
+
 //Add logger info
 let logger = new log();
+
 // sets config options on winston
 logger.cfg({consoleLevel: 'debug',fileLevel: 'error'});
-// Import Database Connection here
 
+// Import Database Connection here
 import {default as Database} from  "../src/server/data/db";
 
-const port = 3000;
+//Database Connection go here
+Database.connect('mongodb://api:!AgileRules4#@ds062059.mlab.com:62059/mic-pro').then(() => {
+logger.log("Database is connected")
+}).catch((error)=>{
+  logger.log(error, 'error')
+});
+
+// use process.env.PORT to set port when in production
+const port = (process.env.PORT || 3000);
 const app = express();
 
 app.use(compression());
 
 //Set Up app folders
 app.use(express.static('dist'));
-app.use('/images', express.static('./src/client/public/images'));
 app.use('/app', express.static('./src/client/app'));
-
-
-/** @todo create a service for loading data into the database
- everytime the application starts for testing */
-//Add sample data here
-Database.connect('mongodb://api:!AgileRules4#@ds062059.mlab.com:62059/mic-pro').then(() => {
-logger.log("Database is connected")
-}).
-catch((error)=>{
-  logger.log(error, 'error')
-});
-
-
-/** Database Connections go Here */
-mongoose.connect("mongodb://localhost/MovieApp");
 
 app.use(bodyParser.urlencoded({
   extended: true
@@ -53,25 +48,11 @@ app.use(methodOverride())
 
 app.use(logger.dev);
 
-
-// parses request cookies, populating
-// req.cookies and req.signedCookies
-// when the secret is passed, used
-// for signing the cookies.
-
-app.use(cookieParser('foobars'));
-// parses json, x-www-form-urlencoded, and multipart/form-data
-
 //Configure ejs vies
 app.set('view engine', 'ejs');
-
-
-/** Mount Api's Here */
+app.set('views', path.join(__dirname,'../src/server/views/'));
 
  /** Mount Routes Here */
- //the moviesite data object is only used it for the example of showing server side templates and should come from a file or database
- //This will be our sites opening view module
-
 //mount movie store module here
 app.use('/movies', moviesRoute);
 
@@ -93,8 +74,8 @@ app.use(function (err, req, res, next) {
   });
   })
 
-
 app.listen(port, function(err) {
+  logger.log(`application started on Port:${port}` ,'info');
   if (err) {
     logger.log(err);
   } else {

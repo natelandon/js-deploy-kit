@@ -55,7 +55,12 @@ export default {
   loader: 'file-loader',
   options: {
     name: '[images][name].[ext]',
-  },
+  }
+},{
+  test: /\.html$/,
+  ignoreCustomFragments: [/\{\{.*?}}/],
+  exclude: /node_modules/,
+  loader: "raw-loader"
 }
     ]
   }

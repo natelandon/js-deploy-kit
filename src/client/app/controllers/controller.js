@@ -11,7 +11,10 @@ let movieControllers = (app)=>
               this.$window = $window;
               this.$location = $location;
               this.$state = $state;
-              this.movies = movieService.getMovies();
+              movieService.getMovies().then((result)=>
+              {
+                this.movies = result;}
+              )
           }
           deleteMovie(id) {
               this.movieService.deleteMovie(id).then(() => {

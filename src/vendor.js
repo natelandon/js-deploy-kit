@@ -13,10 +13,6 @@
  */
 
 /* eslint-disable no-unused-vars */
-
-import 'whatwg-fetch';
-import 'bootstrap';
-import 'fontawesome';
 import 'angular';
 import 'angular-resource';
 import 'angular-ui-router';

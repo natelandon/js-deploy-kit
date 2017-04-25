@@ -46,7 +46,7 @@ export default {
         removeEmptyAttributes: true,
         removeStyleLinkTypeAttributes: true,
         keepClosingSlash: true,
-        minifyJS: false,
+        minifyJS: true,
         minifyCSS: true,
         minifyURLs: true
       },
@@ -64,10 +64,10 @@ export default {
     new webpack.ProvidePlugin({
           $: "jquery",
           jQuery: "jquery"
-      })
+      }),
 
     // Minify JS @todo Make sure to cover how to make angular safe to minfy before using this
-    //new webpack.optimize.UglifyJsPlugin()
+    new webpack.optimize.UglifyJsPlugin()
   ],
   module: {
     loaders: [
@@ -75,9 +75,8 @@ export default {
         test: /\.js$/,
       exclude: /(node_modules|bower_components)/,
       loader: 'babel-loader',
-      query: {
-        presets: ['es2015']
-      }
+      options:{
+        presets: ['es2015']}
       },
       //this is for loading Less and CSS
       {
@@ -85,24 +84,25 @@ export default {
         loader: "style!css!autoprefixer!less?sourceMap",
         include: path.join(__dirname, 'src/client/public/styles')
       },
-        //This is for loading image files and fonts
+      //This is for loading image files and fonts
       {
         test: /\.(eot|svg|ttf|woff|woff2)$/,
         exclude: /(node_modules|bower_components)/,
-        loader: 'url-loader?limit=10000',
-        include: path.join(__dirname, 'src/client/public/fonts'),
-        options: {
-          name: '[dist][fonts][name].[ext]',
-        },
+        loader: 'url-loader?limit=10000'
       },
   {  test: /\.(jpg|png|gif|svg)$/,
   exclude: /(node_modules|bower_components)/,
   loader: 'file-loader',
-  include: path.join(__dirname, 'src/client/public/images'),
   options: {
-    name: '[dist][images][name].[ext]',
-  },
+    name: '[images][name].[ext]',
+  }
 },
+      {
+        test: /\.html$/,
+        ignoreCustomFragments: [/\{\{.*?}}/],
+        exclude: /node_modules/,
+        loader: "raw-loader"
+      },
     {test: /\.css$/, loader: ExtractTextPlugin.extract('css?sourceMap')}
     ]
   }

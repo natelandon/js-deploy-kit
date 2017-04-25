@@ -3,7 +3,8 @@
 *   This class will be where the you put Client side services
 *
 */
-
+import getBaseUrl from '../../../../src/server/core/baseUrl'
+let baseUrl = getBaseUrl();
 let movieService = (app)=>
 {
     app.factory('movieService',['$resource', ($resource) =>
@@ -11,13 +12,13 @@ let movieService = (app)=>
       class MovieService {
           constructor($resource) {
               this.$resource = $resource;
-              this.MovieResource = $resource('/movies/:id');
+              this.MovieResource = $resource(`${baseUrl}/movies/:id`);
           }
           saveMovie(movie) {
               return this.MovieResource.save(movie).$promise;
           }
           getMovies() {
-              return this.MovieResource.query();
+              return this.MovieResource.query().$promise;
           }
           get(id) {
               return this.MovieResource.get({ id: id });
