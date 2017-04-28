@@ -4,7 +4,6 @@ import 'babel-polyfill';
 import express from 'express';
 import path from 'path';
 import compression from 'compression';
-import open from 'open';
 import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
 import methodOverride from 'method-override';
@@ -78,7 +77,5 @@ app.listen(port, function(err) {
   logger.log(`application started on Port:${port}` ,'info');
   if (err) {
     logger.log(err);
-  } else {
-    open('http://localhost:' + port);
   }
 });
