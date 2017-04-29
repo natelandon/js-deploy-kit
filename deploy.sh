@@ -114,17 +114,17 @@ if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
   cd "$DEPLOYMENT_TARGET"
   eval $NPM_CMD install --dev
   exitWithMessageOnError "npm failed"
-  cd - > /dev/null
+  echo "Finished Install."
 fi
-# 3. build npm packages
+# 4. build npm packages
 if [ -e "$DEPLOYMENT_TARGET/buildScripts/bulid.js" ]; then
   cd "$DEPLOYMENT_TARGET"
   eval $NPM_CMD run build
   exitWithMessageOnError "npm failed"
-  cd - > /dev/null
+  echo "Application is ready yo deploy"
 fi
-# 4. run site
-if [ -e "$DEPLOYMENT_TARGET/buildScripts/bulid.js" ]; then
+# 5. run site
+if [ -e "$DEPLOYMENT_TARGET/script.js" ]; then
   cd "$DEPLOYMENT_TARGET"
   eval $NPM_CMD run start
   exitWithMessageOnError "npm failed"
