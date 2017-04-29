@@ -9,6 +9,7 @@ export default {
   devtool: 'source-map',
   noInfo: false,
   entry: {
+    server: path.resolve(__dirname, 'buildScripts/distServer'),
     vendor: path.resolve(__dirname, 'src/vendor'),
     main: path.resolve(__dirname, 'src/client/app')
 
