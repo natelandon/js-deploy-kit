@@ -9,8 +9,8 @@ import bodyParser from 'body-parser';
 import methodOverride from 'method-override';
 
 //import other routes
-import moviesRoute from 'src/server/routes/movie';
-import {default as log} from 'src/server/core/logger';
+import moviesRoute from './src/server/routes/movie';
+import {default as log} from './src/server/core/logger';
 
 //Add logger info
 let logger = new log();
@@ -19,7 +19,7 @@ let logger = new log();
 logger.cfg({consoleLevel: 'debug',fileLevel: 'error'});
 
 // Import Database Connection here
-import {default as Database} from  "src/server/data/db";
+import {default as Database} from  "./src/server/data/db";
 
 //Database Connection go here
 Database.connect('mongodb://api:!AgileRules4#@ds062059.mlab.com:62059/mic-pro').then(() => {
@@ -49,7 +49,7 @@ app.use(logger.dev);
 
 //Configure ejs vies
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname,'src/server/views/'));
+app.set('views', path.join(__dirname,'./src/server/views/'));
 
  /** Mount Routes Here */
 //mount movie store module here
