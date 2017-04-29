@@ -19,6 +19,7 @@
     "clean-server": "rimraf ./server.js",
     "prebuild": "npm-run-all clean-dist clean-server test",
     "build": "babel-node buildScripts/build.js",
+    "postbuild": "node server.js",
     "deploy": "git push"
   },
   "author": "Chad Martin",
