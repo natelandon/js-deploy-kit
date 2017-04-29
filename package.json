@@ -4,7 +4,7 @@
   "description": "JavaScript development environment starter Kit for Coder Camps. I got the build scripts from Cory House the build scripts can be replaced with Gulp or grunt task. See Js-Starter-Kit-Gulp",
   "scripts": {
     "prestart": "babel-node buildScripts/startMessage.js",
-    "start": "npm run build",
+    "start": "npm-run-all --parallel security-check open:src lint:watch test:watch start-mockapi",
     "open:src": "babel-node buildScripts/devServer.js",
     "lint": "esw webpack.config.* src buildScripts --color",
     "lint:watch": "npm run lint -- --watch",
@@ -17,7 +17,7 @@
     "clean-dist": "rimraf ./dist && mkdir dist",
     "prebuild": "npm-run-all clean-dist test lint",
     "build": "babel-node buildScripts/build.js",
-    "postbuild": "babel-node buildScripts/server.js",
+    "postbuild": "babel-node buildScripts/distServer.js",
     "deploy": "surge ./dist"
   },
   "author": "Chad Martin",
