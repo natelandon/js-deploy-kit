@@ -1,0 +1,7 @@
+<step title="Incoming Request" date="2017-04-26T05:54:28.904" instance="b6c882" url="/deploy?scmType=GitHub&amp;isAsync=true" method="POST" type="request" pid="6996,2,22" Connection="Keep-Alive" Content-Length="87" Authorization="Bas..." Expect="100-continue" Host="codercamps-mic.scm.azurewebsites.net" User-Agent="Azure-WebSites-Controller/62.0.8598.32" x-ms-request-id="7bc5a335-4b62-47e3-b8d8-54e95b0da611" X-ARR-LOG-ID="7bc5a335-4b62-47e3-b8d8-54e95b0da611" X-SITE-DEPLOYMENT-ID="codercamps-mic" WAS-DEFAULT-HOSTNAME="codercamps-mic.scm.azurewebsites.net" X-MS-CLIENT-PRINCIPAL-NAME="$co..." X-MS-SITE-RESTRICTED-JWT="eyJ..." >
+  <step title="Cleanup Xml Logs" date="2017-04-26T05:54:28.904" /><!-- duration: 0ms -->
+  <step title="FetchHandler" date="2017-04-26T05:54:28.919" >
+    <step title="Start deployment in the background" date="2017-04-26T05:54:28.919" /><!-- duration: 31ms -->
+  </step><!-- duration: 31ms -->
+  <step title="Outgoing response" date="2017-04-26T05:54:28.951" type="response" statusCode="202" statusText="Accepted" Server="Microsoft-IIS/8.0" Location="https://codercamps-mic.scm.azurewebsites.net/api/deployments/latest?deployer=GitHub&amp;time=2017-04-26_05-54-28Z" Cache-Control="private" X-AspNet-Version="4.0.30319" /><!-- duration: 0ms -->
+</step><!-- duration: 62ms -->

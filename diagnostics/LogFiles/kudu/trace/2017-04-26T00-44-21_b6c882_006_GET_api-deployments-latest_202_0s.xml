@@ -1,0 +1,14 @@
+<step title="Incoming Request" date="2017-04-26T00:44:21.116" instance="b6c882" url="/api/deployments/latest?deployer=GitHub&amp;time=2017-04-26_00-44-10Z" method="GET" type="request" pid="6216,2,13" Connection="Keep-Alive" Authorization="Bas..." Host="codercamps-mic.scm.azurewebsites.net" User-Agent="Azure-WebSites-Controller/62.0.8598.32" x-ms-request-id="c618c6c0-72d0-4052-ac85-65cd05dd9565" X-ARR-LOG-ID="c618c6c0-72d0-4052-ac85-65cd05dd9565" X-SITE-DEPLOYMENT-ID="codercamps-mic" WAS-DEFAULT-HOSTNAME="codercamps-mic.scm.azurewebsites.net" X-MS-CLIENT-PRINCIPAL-NAME="$co..." >
+  <step title="Cleanup Xml Logs" date="2017-04-26T00:44:21.127" /><!-- duration: 0ms -->
+  <step title="DeploymentService.GetResult" date="2017-04-26T00:44:21.127" >
+    <step title="DeploymentService.GetLatestDeployment" date="2017-04-26T00:44:21.127" >
+      <step title="DeploymentManager.GetResults" date="2017-04-26T00:44:21.127" >
+        <step title="Purge deployment items" date="2017-04-26T00:44:21.205" >
+          <step title="Remove temp-3025, Pending, received at 4/26/2017 12:44:10 AM" date="2017-04-26T00:44:21.252" /><!-- duration: 0ms -->
+        </step><!-- duration: 47ms -->
+      </step><!-- duration: 125ms -->
+      <step title="Deployment e2c5342108080d6fae0aa47d740e51b86a5cb1e5 is Building" date="2017-04-26T00:44:21.252" /><!-- duration: 0ms -->
+    </step><!-- duration: 125ms -->
+  </step><!-- duration: 125ms -->
+  <step title="Outgoing response" date="2017-04-26T00:44:21.267" type="response" statusCode="202" statusText="Accepted" Server="Microsoft-IIS/8.0" x-ms-request-id="c618c6c0-72d0-4052-ac85-65cd05dd9565" Cache-Control="private" X-AspNet-Version="4.0.30319" Location="https://codercamps-mic.scm.azurewebsites.net/api/deployments/latest?deployer=GitHub&amp;time=2017-04-26_00-44-10Z" Content-Type="application/json; charset=utf-8" /><!-- duration: 0ms -->
+</step><!-- duration: 151ms -->

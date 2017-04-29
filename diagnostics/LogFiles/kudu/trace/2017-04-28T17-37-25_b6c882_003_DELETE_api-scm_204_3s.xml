@@ -1,0 +1,9 @@
+<step title="Incoming Request" date="2017-04-28T17:37:25.625" instance="b6c882" url="/api/scm" method="DELETE" type="request" pid="1244,2,9" Connection="Keep-Alive" Authorization="Bas..." Host="codercamps-mic.scm.azurewebsites.net" User-Agent="Azure-WebSites-Controller/62.0.8598.32" x-ms-request-id="ba03e829-220a-40d3-82e6-fdcb9cc46ee6" X-ARR-LOG-ID="ba03e829-220a-40d3-82e6-fdcb9cc46ee6" X-SITE-DEPLOYMENT-ID="codercamps-mic" WAS-DEFAULT-HOSTNAME="codercamps-mic.scm.azurewebsites.net" X-MS-CLIENT-PRINCIPAL-NAME="$co..." >
+  <step title="Assuming git repository at D:\home\site\repository" date="2017-04-28T17:37:26.399" /><!-- duration: 16ms -->
+  <step title="Deleting repository" date="2017-04-28T17:37:26.649" /><!-- duration: 1673ms -->
+  <step title="Delete auto swap lock file" date="2017-04-28T17:37:28.321" /><!-- duration: 16ms -->
+  <step title="Deleting ssh key" date="2017-04-28T17:37:28.337" /><!-- duration: 0ms -->
+  <step title="Updating initial deployment manifest" date="2017-04-28T17:37:28.337" /><!-- duration: 16ms -->
+  <step title="Deleting deployment cache" date="2017-04-28T17:37:28.353" /><!-- duration: 313ms -->
+  <step title="Outgoing response" date="2017-04-28T17:37:28.681" type="response" statusCode="204" statusText="No Content" Server="Microsoft-IIS/8.0" x-ms-request-id="ba03e829-220a-40d3-82e6-fdcb9cc46ee6" Cache-Control="private" X-AspNet-Version="4.0.30319" /><!-- duration: 0ms -->
+</step><!-- duration: 3056ms -->

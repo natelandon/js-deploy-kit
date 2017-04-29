@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<deployment>
+  <id>963572c300aa18b4a7436815d992acf4d0006158</id>
+  <author>Chad Martin</author>
+  <deployer>GitHub</deployer>
+  <authorEmail>Chad Martin</authorEmail>
+  <message>azure code
+</message>
+  <progress></progress>
+  <status>Success</status>
+  <statusText></statusText>
+  <lastSuccessEndTime>2017-04-29T03:02:51.5668665Z</lastSuccessEndTime>
+  <receivedTime>2017-04-29T03:01:47.7681198Z</receivedTime>
+  <startTime>2017-04-29T03:01:47.8645225Z</startTime>
+  <endTime>2017-04-29T03:02:51.5668665Z</endTime>
+  <complete>True</complete>
+  <is_temp>False</is_temp>
+  <is_readonly>False</is_readonly>
+</deployment>

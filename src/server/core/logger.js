@@ -36,7 +36,7 @@ export default class loggerService{
       var logDirectory = path.join(__dirname, 'log')
 
       // ensure log directory exists
-      fs.existsSync(logDirectory) || fs.mkdirSync(logDirectory)
+      //fs.existsSync(logDirectory) || fs.mkdirSync(logDirectory)
 
        // create a rotating write stream this keep our log files from getting to big
        var accessLogStream = rfs('request.log', {

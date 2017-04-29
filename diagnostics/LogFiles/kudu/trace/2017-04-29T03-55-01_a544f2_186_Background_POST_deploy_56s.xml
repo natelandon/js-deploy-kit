@@ -1,0 +1,27 @@
+<step title="BackgroundTrace" date="2017-04-29T03:55:01.404" instance="a544f2" url="/deploy" method="POST" >
+  <step title="Performing fetch based deployment" date="2017-04-29T03:55:01.404" >
+    <step title="Creating temporary deployment" date="2017-04-29T03:55:01.404" /><!-- duration: 33ms -->
+    <step title="LibGit2SharpRepository Add Remote" date="2017-04-29T03:55:01.484" >
+      <step title="Git remote exists" date="2017-04-29T03:55:01.484" /><!-- duration: 0ms -->
+    </step><!-- duration: 0ms -->
+    <step title="LibGit2SharpRepository Fetch" date="2017-04-29T03:55:01.499" /><!-- duration: 603ms -->
+    <step title="LibGit2SharpRepository Update" date="2017-04-29T03:55:02.102" /><!-- duration: 221ms -->
+    <step title="DeploymentManager.Deploy(id:0ee8a5a6b70f3361ff9cec95fe5e3328b1a1c0a9)" date="2017-04-29T03:55:02.371" >
+      <step title="Collecting changeset information" date="2017-04-29T03:55:02.371" /><!-- duration: 31ms -->
+      <step title="Updating submodules" date="2017-04-29T03:55:02.402" /><!-- duration: 31ms -->
+      <step title="Determining deployment builder" date="2017-04-29T03:55:02.480" >
+        <step title="Builder is NodeSiteBuilder" date="2017-04-29T03:55:02.496" /><!-- duration: 0ms -->
+      </step><!-- duration: 16ms -->
+      <step title="Copying SSH keys" date="2017-04-29T03:55:02.513" /><!-- duration: 16ms -->
+      <step title="Building" date="2017-04-29T03:55:02.528" >
+        <step title="Generating deployment script" date="2017-04-29T03:55:02.562" >
+          <step title="Using cached version of the deployment script for command: -y --no-dot-deployment -r &quot;D:\home\site\repository&quot; -o &quot;D:\home\site\deployments\tools&quot; --node --sitePath &quot;D:\home\site\repository&quot;" date="2017-04-29T03:55:02.577" /><!-- duration: 0ms -->
+        </step><!-- duration: 16ms -->
+        <step title="Executing external process" date="2017-04-29T03:55:02.624" type="process" path="starter.cmd" arguments="&quot;D:\home\site\deployments\tools\deploy.cmd&quot;" /><!-- duration: 54489ms -->
+        <step title="Functions are not enabled" date="2017-04-29T03:55:57.175" /><!-- duration: 0ms -->
+      </step><!-- duration: 54881ms -->
+    </step><!-- duration: 55039ms -->
+    <step title="Cleaning up temp files" date="2017-04-29T03:55:57.410" /><!-- duration: 16ms -->
+    <step title="WebHooksManager.PublishEventAsync: PostDeployment" date="2017-04-29T03:55:57.441" /><!-- duration: 16ms -->
+  </step><!-- duration: 56084ms -->
+</step><!-- duration: 56084ms -->

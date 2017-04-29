@@ -1,0 +1,59 @@
+<step title="Incoming Request" date="2017-04-26T05:51:46.191" instance="b6c882" url="/api/deployments/78b505a42662fdce471ca629e3c4857bab2d6b26?api-version=2016-03-01" method="PUT" type="request" pid="6996,2,24" Connection="Keep-Alive" Content-Length="17" Content-Type="application/json" Accept="application/json" Accept-Encoding="gzip, deflate" Accept-Language="en" Expect="100-continue" Host="codercamps-mic.scm.azurewebsites.net" Referer="https://management.azure.com/subscriptions/e9d972a0-d24e-48c2-a42e-ef482a91e9ac/resourcegroups/micgroup/providers/Microsoft.Web/sites/codercamps-mic/deployments/78b505a42662fdce471ca629e3c4857bab2d6b26?api-version=2016-03-01" User-Agent="Portal-Exp/5.12.32.116 (Websites) Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML%2C like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.14393" x-ms-version="2016-03-01" x-ms-client-request-id="8c24f622-5055-4af1-be54-cc0489feb030" x-ms-client-session-id="cfe42d37a450427badeb9275c239ddac" x-ms-arm-request-tracking-id="c021efe8-b47d-464c-8148-3971bbbbd8ee" x-ms-correlation-request-id="c021efe8-b47d-464c-8148-3971bbbbd8ee" x-ms-routing-request-id="SOUTHCENTRALUS:20170426T055147Z:c021efe8-b47d-464c-8148-3971bbbbd8ee" x-ms-client-location="southcentralus" x-ms-client-ip-address="23.100.127.249" x-ms-client-audience="https://management.core.windows.net/" x-ms-client-scope="user_impersonation" x-ms-client-acr="1" x-ms-client-app-id="c44b4083-3bb0-49c1-b47d-974e53cbdf3c" x-ms-client-app-id-acr="2" x-ms-client-tenant-id="54076613-357c-4499-bb2e-e5933f0d49b9" x-ms-client-issuer="https://sts.windows.net/54076613-357c-4499-bb2e-e5933f0d49b9/" x-ms-client-object-id="e0449230-3a46-4a4e-b161-961cc0e69170" x-ms-client-principal-id="1003BFFD9D5D47EA" x-ms-client-principal-name="Cha..." x-ms-client-authorization-source="Legacy" x-ms-client-identity-provider="" x-ms-client-authentication-methods="pwd" x-ms-from-geomaster="true" x-ms-via-extensions-route="true" x-ms-geo-location="South Central US" X-ARR-LOG-ID="86ad3a97-6a96-4d7d-a06b-8f132fa8b999" X-SITE-DEPLOYMENT-ID="codercamps-mic" WAS-DEFAULT-HOSTNAME="codercamps-mic.scm.azurewebsites.net" X-MS-SITE-RESTRICTED-JWT="eyJ..." >
+  <step title="DeploymentService.Deploy(id)" date="2017-04-26T05:51:46.206" >
+    <step title="Assuming git repository at D:\home\site\repository" date="2017-04-26T05:51:46.238" /><!-- duration: 0ms -->
+    <step title="Assuming git repository at D:\home\site\repository" date="2017-04-26T05:51:46.269" /><!-- duration: 0ms -->
+    <step title="DeploymentManager.Deploy(id:78b505a42662fdce471ca629e3c4857bab2d6b26)" date="2017-04-26T05:51:46.285" >
+      <step title="Collecting changeset information" date="2017-04-26T05:51:46.300" /><!-- duration: 16ms -->
+      <step title="Updating to specific changeset" date="2017-04-26T05:51:46.332" /><!-- duration: 159ms -->
+      <step title="Updating submodules" date="2017-04-26T05:51:46.507" /><!-- duration: 31ms -->
+      <step title="Determining deployment builder" date="2017-04-26T05:51:46.585" >
+        <step title="Builder is CustomBuilder" date="2017-04-26T05:51:46.585" /><!-- duration: 0ms -->
+      </step><!-- duration: 0ms -->
+      <step title="Copying SSH keys" date="2017-04-26T05:51:46.601" /><!-- duration: 16ms -->
+      <step title="Building" date="2017-04-26T05:51:46.616" >
+        <step title="Executing external process" date="2017-04-26T05:51:46.695" type="process" path="starter.cmd" arguments="deploy.cmd" >
+          <step title="Cpu: node(12372,5.438s)+node(9608,0.375s)+cmd(1928,0.078s)+node(10948,2.313s)+cmd(3952,0.109s)=total(8.313s)" date="2017-04-26T05:55:04.193" /><!-- duration: 0ms -->
+          <step title="starter.cmd: no io activity for 61s, prev-cpu=-1.000s, current-cpu=8.313s" date="2017-04-26T05:55:04.209" /><!-- duration: 0ms -->
+          <step title="Cpu: node(12372,5.438s)+node(9608,0.375s)+cmd(1928,0.078s)+node(10948,2.313s)+cmd(3952,0.109s)=total(8.313s)" date="2017-04-26T05:56:04.754" /><!-- duration: 0ms -->
+          <step title="starter.cmd: no io activity for 121s, prev-cpu=8.313s, current-cpu=8.313s" date="2017-04-26T05:56:04.769" /><!-- duration: 0ms -->
+          <step title="Abort Process &apos;node(12372)&apos;." date="2017-04-26T05:56:04.785" /><!-- duration: 4ms -->
+          <step title="Abort Process &apos;node(10948)&apos;." date="2017-04-26T05:56:04.867" /><!-- duration: 0ms -->
+          <step title="Abort Process &apos;cmd(3952)&apos;." date="2017-04-26T05:56:04.883" /><!-- duration: 0ms -->
+        </step><!-- duration: 258188ms -->
+        <step title="Error occurred" date="2017-04-26T05:56:04.898" type="error" text="One or more errors occurred." stackTrace="   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at Kudu.Core.Infrastructure.Executable.ExecuteInternal(ITracer tracer, Func`2 onWriteOutput, Func`2 onWriteError, Encoding encoding, String arguments, Object[] args)
+   at Kudu.Core.Infrastructure.Executable.ExecuteWithProgressWriter(ILogger logger, ITracer tracer, String arguments, Object[] args)
+   at Kudu.Core.Deployment.Generator.ExternalCommandBuilder.RunCommand(DeploymentContext context, String command, String message)" innerText="Command &apos;starter.cmd deploy.cmd&apos; was aborted due to no output nor CPU activity for 61 seconds. You can increase the SCM_COMMAND_IDLE_TIMEOUT app setting (or WEBJOBS_IDLE_TIMEOUT if this is a WebJob) if needed.
+starter.cmd deploy.cmd" innerStackTrace="   at Kudu.Core.Infrastructure.IdleManager.WaitForExit(IProcess process)
+   at Kudu.Core.Infrastructure.ProcessExtensions.&lt;Start&gt;d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Kudu.Core.Infrastructure.Executable.&lt;ExecuteAsync&gt;d__31.MoveNext()" /><!-- duration: 0ms -->
+      </step><!-- duration: 258427ms -->
+      <step title="Error occurred" date="2017-04-26T05:56:05.043" type="error" text="One or more errors occurred." stackTrace="   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at Kudu.Core.Infrastructure.Executable.ExecuteInternal(ITracer tracer, Func`2 onWriteOutput, Func`2 onWriteError, Encoding encoding, String arguments, Object[] args)
+   at Kudu.Core.Infrastructure.Executable.ExecuteWithProgressWriter(ILogger logger, ITracer tracer, String arguments, Object[] args)
+   at Kudu.Core.Deployment.Generator.ExternalCommandBuilder.RunCommand(DeploymentContext context, String command, String message)
+   at Kudu.Core.Deployment.Generator.CustomBuilder.Build(DeploymentContext context)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at Kudu.Core.Deployment.DeploymentManager.&lt;Build&gt;d__35.MoveNext()" innerText="Command &apos;starter.cmd deploy.cmd&apos; was aborted due to no output nor CPU activity for 61 seconds. You can increase the SCM_COMMAND_IDLE_TIMEOUT app setting (or WEBJOBS_IDLE_TIMEOUT if this is a WebJob) if needed.
+starter.cmd deploy.cmd" innerStackTrace="   at Kudu.Core.Infrastructure.IdleManager.WaitForExit(IProcess process)
+   at Kudu.Core.Infrastructure.ProcessExtensions.&lt;Start&gt;d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Kudu.Core.Infrastructure.Executable.&lt;ExecuteAsync&gt;d__31.MoveNext()" /><!-- duration: 0ms -->
+    </step><!-- duration: 258759ms -->
+    <step title="Cleaning up temp files" date="2017-04-26T05:56:05.059" /><!-- duration: 0ms -->
+    <step title="WebHooksManager.PublishEventAsync: PostDeployment" date="2017-04-26T05:56:05.075" /><!-- duration: 16ms -->
+  </step><!-- duration: 258884ms -->
+  <step title="Outgoing response" date="2017-04-26T05:56:05.090" type="response" statusCode="200" statusText="OK" Server="Microsoft-IIS/8.0" x-ms-request-id="86ad3a97-6a96-4d7d-a06b-8f132fa8b999" Cache-Control="private" X-AspNet-Version="4.0.30319" /><!-- duration: 0ms -->
+</step><!-- duration: 258899ms -->

@@ -1,0 +1,24 @@
+<step title="BackgroundTrace" date="2017-04-26T00:59:25.212" instance="b6c882" url="/deploy" method="POST" >
+  <step title="Performing fetch based deployment" date="2017-04-26T00:59:25.212" >
+    <step title="Creating temporary deployment" date="2017-04-26T00:59:25.212" /><!-- duration: 16ms -->
+    <step title="LibGit2SharpRepository Add Remote" date="2017-04-26T00:59:25.275" >
+      <step title="Git remote added" date="2017-04-26T00:59:25.384" /><!-- duration: 0ms -->
+    </step><!-- duration: 109ms -->
+    <step title="LibGit2SharpRepository Fetch" date="2017-04-26T00:59:25.400" /><!-- duration: 531ms -->
+    <step title="LibGit2SharpRepository Update" date="2017-04-26T00:59:25.931" /><!-- duration: 204ms -->
+    <step title="DeploymentManager.Deploy(id:0767bcf09565f61a28ce0688da81bfc8e2266c22)" date="2017-04-26T00:59:26.166" >
+      <step title="Collecting changeset information" date="2017-04-26T00:59:26.166" /><!-- duration: 31ms -->
+      <step title="Updating submodules" date="2017-04-26T00:59:26.198" /><!-- duration: 31ms -->
+      <step title="Determining deployment builder" date="2017-04-26T00:59:26.276" >
+        <step title="Builder is CustomBuilder" date="2017-04-26T00:59:26.276" /><!-- duration: 0ms -->
+      </step><!-- duration: 0ms -->
+      <step title="Copying SSH keys" date="2017-04-26T00:59:26.291" /><!-- duration: 16ms -->
+      <step title="Building" date="2017-04-26T00:59:26.307" >
+        <step title="Executing external process" date="2017-04-26T00:59:26.376" type="process" path="starter.cmd" arguments="deploy.cmd" /><!-- duration: 104ms -->
+        <step title="Functions are not enabled" date="2017-04-26T00:59:26.511" /><!-- duration: 0ms -->
+      </step><!-- duration: 346ms -->
+    </step><!-- duration: 487ms -->
+    <step title="Cleaning up temp files" date="2017-04-26T00:59:26.653" /><!-- duration: 0ms -->
+    <step title="WebHooksManager.PublishEventAsync: PostDeployment" date="2017-04-26T00:59:26.684" /><!-- duration: 16ms -->
+  </step><!-- duration: 1519ms -->
+</step><!-- duration: 1535ms -->
