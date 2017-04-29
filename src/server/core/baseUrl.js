@@ -1,5 +1,5 @@
 export default function getBaseUrl() {
-  return getQueryStringParameterByName('usedevApi') ? `http://localhost:3000` : `http://localhost:3000`;
+  return getQueryStringParameterByName('usedevApi') ? `http://localhost:3000` : `https://rocky-stream-97460.herokuapp.com`;
 }
 
 function getQueryStringParameterByName(name, url) {
