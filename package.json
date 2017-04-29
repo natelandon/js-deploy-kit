@@ -17,7 +17,7 @@
     "start-mockapi": "json-server --watch src/server/data/db.json --port 3001",
     "clean-dist": "rimraf ./dist && mkdir dist",
     "clean-server": "rimraf ./server.js",
-    "prebuild": "clean-dist clean-server test",
+    "prebuild": "clean-dist clean-server",
     "build": "babel-node buildScripts/build.js",
     "postbuild": "node server.js",
     "deploy": "git push"
