@@ -1,6 +1,6 @@
 /** This is disables error in eslint for the next parameter in the error route below */
 /* eslint-disable no-unused-vars */
-import 'babel-polyfill';
+
 import express from 'express';
 import path from 'path';
 import compression from 'compression';
