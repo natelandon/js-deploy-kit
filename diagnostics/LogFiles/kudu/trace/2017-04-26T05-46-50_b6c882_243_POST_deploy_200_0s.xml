@@ -1,6 +1,0 @@
-<step title="Incoming Request" date="2017-04-26T05:46:50.997" instance="b6c882" url="/deploy?scmType=GitHub" method="POST" type="request" pid="6996,2,26" Connection="Keep-Alive" Content-Length="13099" Content-Type="application/x-www-form-urlencoded" Accept="*/*" Authorization="Bas..." Host="codercamps-mic.scm.azurewebsites.net" User-Agent="GitHub-Hookshot/2cc07f9" X-GitHub-Event="push" X-GitHub-Delivery="bec75780-2a43-11e7-9ab8-14abf869f96f" X-ARR-LOG-ID="d6c21ac4-1797-49a9-8030-58d985e75612" X-SITE-DEPLOYMENT-ID="codercamps-mic" WAS-DEFAULT-HOSTNAME="codercamps-mic.scm.azurewebsites.net" X-MS-CLIENT-PRINCIPAL-NAME="$co..." X-MS-SITE-RESTRICTED-JWT="eyJ..." >
-  <step title="FetchHandler" date="2017-04-26T05:46:51.013" >
-    <step title="No-op for deployment." date="2017-04-26T05:46:51.013" /><!-- duration: 0ms -->
-  </step><!-- duration: 16ms -->
-  <step title="Outgoing response" date="2017-04-26T05:46:51.029" type="response" statusCode="200" statusText="OK" Server="Microsoft-IIS/8.0" Cache-Control="private" X-AspNet-Version="4.0.30319" /><!-- duration: 0ms -->
-</step><!-- duration: 31ms -->

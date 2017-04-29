@@ -1,4 +1,0 @@
-<step title="Incoming Request" date="2017-04-29T04:12:32.735" instance="a544f2" url="/api/vfs/LogFiles/eventlog.xml" method="GET" type="request" pid="6752,2,37" Connection="Keep-Alive" Authorization="Bas..." Host="codercamps-mic.scm.azurewebsites.net" X-ARR-LOG-ID="67389986-9975-46b8-937c-bca54f8d092b" X-SITE-DEPLOYMENT-ID="codercamps-mic" WAS-DEFAULT-HOSTNAME="codercamps-mic.scm.azurewebsites.net" X-MS-CLIENT-PRINCIPAL-NAME="$co..." >
-  <step title="Cleanup Xml Logs" date="2017-04-29T04:12:32.735" /><!-- duration: 0ms -->
-  <step title="Outgoing response" date="2017-04-29T04:12:32.750" type="response" statusCode="404" statusText="Not Found" Server="Microsoft-IIS/8.0" x-ms-request-id="67389986-9975-46b8-937c-bca54f8d092b" Cache-Control="private" X-AspNet-Version="4.0.30319" Content-Type="application/json; charset=utf-8" /><!-- duration: 0ms -->
-</step><!-- duration: 16ms -->

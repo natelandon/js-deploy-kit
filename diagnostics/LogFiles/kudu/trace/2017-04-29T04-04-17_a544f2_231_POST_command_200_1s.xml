@@ -1,5 +1,0 @@
-<step title="Incoming Request" date="2017-04-29T04:04:17.754" instance="a544f2" url="/command" method="POST" type="request" pid="6752,2,55" Connection="Keep-Alive" Content-Length="38" Content-Type="application/json" Authorization="Bas..." Host="codercamps-mic.scm.azurewebsites.net" X-WAWS-Unencoded-URL="/command" X-ARR-LOG-ID="ddcc8189-65c5-43a4-aee0-53bc6b1c17c0" X-SITE-DEPLOYMENT-ID="codercamps-mic" WAS-DEFAULT-HOSTNAME="codercamps-mic.scm.azurewebsites.net" X-MS-CLIENT-PRINCIPAL-NAME="$co..." >
-  <step title="Cleanup Xml Logs" date="2017-04-29T04:04:17.754" /><!-- duration: 0ms -->
-  <step title="Executing cd" date="2017-04-29T04:04:17.754" CWD="site\wwwroot" /><!-- duration: 1029ms -->
-  <step title="Outgoing response" date="2017-04-29T04:04:18.843" type="response" statusCode="200" statusText="OK" Server="Microsoft-IIS/8.0" x-ms-request-id="ddcc8189-65c5-43a4-aee0-53bc6b1c17c0" Cache-Control="private" X-AspNet-Version="4.0.30319" Content-Type="application/json; charset=utf-8" /><!-- duration: 48ms -->
-</step><!-- duration: 1167ms -->
