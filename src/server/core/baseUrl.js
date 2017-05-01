@@ -15,7 +15,7 @@ let testHTPPS= (string)=>
 {
   let https ="https:";	// Variable Name 1
   let m = string.match(https);
-  return (m.length > 0 ) ? true : false
+  return (m.!== null ) ?  true : false;
 }
 function getApiurl() {
   let url = window.location.href;
@@ -23,7 +23,7 @@ function getApiurl() {
   {
     return  `http://localhost:3000`;
   }
-  else return (testHTPPS(url) !== null ) ?   `https://codercamps-mic.azurewebsites.net` : `http://codercamps-mic.azurewebsites.net`;
+  else return (testHTPPS(url)) ?   `https://codercamps-mic.azurewebsites.net` : `http://codercamps-mic.azurewebsites.net`;
 
 }
 
