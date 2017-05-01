@@ -1,5 +1,5 @@
 export default function getBaseUrl() {
-  return getQueryStringParameterByName('usedevApi') ? `http://localhost:3000` : `https://codercamps-mic.azurewebsites.net`;
+  return getQueryStringParameterByName('usedevApi') ? `http://localhost:3000` : `http://codercamps-mic.azurewebsites.net`;
 }
 
 function getQueryStringParameterByName(name, url) {
