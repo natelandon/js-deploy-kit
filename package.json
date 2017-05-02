@@ -16,7 +16,7 @@
     "test:watch": "npm run test -- --watch",
     "start-mockapi": "json-server --watch src/server/data/db.json --port 3001",
     "clean-dist": "rimraf ./dist && mkdir dist",
-    "clean-server": "rimraf ./server.js",
+    "clean-server": "rimraf ./server.*",
     "prebuild": "npm-run-all clean-dist clean-server test",
     "build": "babel-node buildScripts/build.js",
     "deploy": "git push"
