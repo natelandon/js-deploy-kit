@@ -15,7 +15,7 @@ let testHTPPS= (string)=>
 {
   let https ="https:";	// Variable Name 1
   let m = string.match(https);
-  return (m.!== null ) ?  true : false;
+  return (m !== null ) ?  true : false;
 }
 function getApiurl() {
   let url = window.location.href;

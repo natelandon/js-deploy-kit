@@ -7,6 +7,9 @@ import chalk from 'chalk';
 process.env.NODE_ENV = 'production';
 
 console.log(chalk.blue('Generating server bundle for production. This will take a moment...'));
+/** Back End - Begin
+    Creates server.js file
+    */
 webpack(azureConfig).run((err, stats) => {
   if (err) { // so a fatal error occurred. Stop here.
     console.log(chalk.red(err));
@@ -31,6 +34,14 @@ webpack(azureConfig).run((err, stats) => {
 
   return 0;
 });
+
+/** Front end Begin
+    Creates /dist folder
+    images.[chunk].[ext]
+    index.[chunk].html
+    main.[chunk].js
+    vendor.[chunk].js
+    */
 webpack(webpackConfig).run((err, stats) => {
   if (err) { // so a fatal error occurred. Stop here.
     console.log(chalk.red(err));

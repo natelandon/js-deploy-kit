@@ -67,7 +67,7 @@ export default {
           jQuery: "jquery"
       }),
 
-    // Minify JS @todo Make sure to cover how to make angular safe to minfy before using this
+    // Minify JS
     new webpack.optimize.UglifyJsPlugin()
   ],
   module: {

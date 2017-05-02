@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import webpack from 'webpack';
 var nodeModules = {};
 fs.readdirSync('node_modules')
   .filter(function(x) {
@@ -11,6 +12,7 @@ fs.readdirSync('node_modules')
 
 export default {
   debug: true,
+  devtool: 'source-map',
   noInfo: false,
   entry: './buildScripts/distServer.js',
   target: 'node',
@@ -19,6 +21,8 @@ export default {
     filename: 'server.js'
   },
   externals: nodeModules,
+  // Minify JS
+  plugins: [new webpack.optimize.UglifyJsPlugin()],
   module: {
     loaders: [
       {
