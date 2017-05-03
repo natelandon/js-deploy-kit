@@ -22,7 +22,6 @@ router.put('/', movieService.save);
 //get movie details
 router.get('/:id', movieService.getbyId);
 
-
 // DELETE MOVIE
 router.delete('/:id', movieService.remove);
 

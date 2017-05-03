@@ -11,15 +11,12 @@ let movieControllers = (app)=>
               this.$window = $window;
               this.$location = $location;
               this.$state = $state;
-              movieService.getMovies().then((result)=>
-              {
-                this.movies = result;}
-              )
+              this.movies =   movieService.query();
           }
           deleteMovie(id) {
-              this.movieService.deleteMovie(id).then(() => {
-                  this.$window.location.reload();
-              });
+              this.movieService.delete({ id: id },()=>{  this.$window.location.reload();}
+              );
+
           }
       }
       class AddMovieController {
@@ -28,9 +25,8 @@ let movieControllers = (app)=>
               this.$state = $state;
           }
           addMovie() {
-            this.movieService.saveMovie(this.movie).then((result) => {
-                  this.$state.go('Home');
-              });
+            this.movieService.save(this.movie);
+              this.$state.go('Home');
           }
       }
       AddMovieController.$inject = ['movieService', '$state'];
@@ -48,9 +44,8 @@ let movieControllers = (app)=>
         }
         editMovie() {
             this.movie._id = this.id;
-            this.movieService.saveMovie(this.movie).then(() => {
-                this.$state.go('Home');
-            });
+            this.movieService.update(this.movie)
+            this.$state.go('Home');
         }
     }
 

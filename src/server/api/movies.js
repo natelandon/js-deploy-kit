@@ -45,6 +45,7 @@ let save = (req, res, next) => {
 
 // DELETE MOVIE
 let remove = (req, res, next) => {
+     logger.log(`Trying to remove movie is: ${req.params['id'].trim()}`, 'info')
     let movieId = new mongodb.ObjectID(req.params['id'].trim());
     Database.db.collection('movies').remove({ _id: movieId }).then(() => {
         res.sendStatus(200);
@@ -56,7 +57,7 @@ let remove = (req, res, next) => {
 };
 let getMoviebyId = (req, res, next) =>
   {
-    let movieId = new mongodb.ObjectID(req.params['id']);
+    let movieId = new mongodb.ObjectID(req.params['id'].trim());
     Database.db.collection('movies').findOne(movieId).then((result)=> {
         logger.log(`the movie is ${JSON.stringify(result)}`, 'debug')
         if(result === null)
