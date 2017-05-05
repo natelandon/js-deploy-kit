@@ -31,7 +31,7 @@ logger.log("Database is connected")
 // use process.env.PORT to set port when in production
 const port = (process.env.PORT || 3000);
 const app = express();
-
+logger.log(module,'error');
 app.use(compression());
 
 //Set Up app folders

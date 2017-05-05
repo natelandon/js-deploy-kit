@@ -4,7 +4,7 @@
   "description": "JavaScript development environment starter Kit for Coder Camps. I got the build scripts from Cory House the build scripts can be replaced with Gulp or grunt task. See Js-Starter-Kit-Gulp",
   "scripts": {
     "prestart": "babel-node buildScripts/startMessage.js",
-    "start": "node server.js",
+    "start": "node cluster.js",
     "startdev": "npm-run-all --parallel security-check open:src lint:watch test:watch start-mockapi",
     "open:src": "babel-node buildScripts/devServer.js",
     "lint": "esw webpack.config.* src buildScripts --color",
