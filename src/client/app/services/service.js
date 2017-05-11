@@ -7,27 +7,15 @@ import getBaseUrl from '../../../../src/server/core/baseUrl'
 let baseUrl = getBaseUrl();
 let movieService = (app)=>
 {
-    app.factory('movieService',['$resource', ($resource) =>
-    {
-      class MovieService {
-          constructor($resource) {
-              this.$resource = $resource;
-              this.MovieResource = $resource(`${baseUrl}/movies/:id`);
+
+    app.factory('movieService',['$resource', function ($resource) {
+      var data = $resource(`${baseUrl}/movies/:id`, {id: '@id'}, {
+      update:{
+          method:'PUT'
           }
-          saveMovie(movie) {
-              return this.MovieResource.save(movie).$promise;
-          }
-          getMovies() {
-              return this.MovieResource.query().$promise;
-          }
-          get(id) {
-              return this.MovieResource.get({ id: id });
-          }
-          deleteMovie(id) {
-              return this.MovieResource.delete({ id: id }).$promise;
-          }
-        }
-      return new MovieService($resource);
-      }]);
+      });
+      return data;
+  }]);
+
 };
 export default movieService;

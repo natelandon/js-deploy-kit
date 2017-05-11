@@ -9,6 +9,7 @@ export default {
   devtool: 'source-map',
   noInfo: false,
   entry: {
+
     vendor: path.resolve(__dirname, 'src/vendor'),
     main: path.resolve(__dirname, 'src/client/app')
 
@@ -66,7 +67,7 @@ export default {
           jQuery: "jquery"
       }),
 
-    // Minify JS @todo Make sure to cover how to make angular safe to minfy before using this
+    // Minify JS
     new webpack.optimize.UglifyJsPlugin()
   ],
   module: {

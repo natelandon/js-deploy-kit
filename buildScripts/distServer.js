@@ -1,10 +1,9 @@
 /** This is disables error in eslint for the next parameter in the error route below */
 /* eslint-disable no-unused-vars */
-import 'babel-polyfill';
+
 import express from 'express';
 import path from 'path';
 import compression from 'compression';
-import open from 'open';
 import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
 import methodOverride from 'method-override';
@@ -12,7 +11,7 @@ import methodOverride from 'method-override';
 //import other routes
 import moviesRoute from '../src/server/routes/movie';
 import {default as log} from '../src/server/core/logger';
-
+const pid =process.pid;
 //Add logger info
 let logger = new log();
 
@@ -24,7 +23,7 @@ import {default as Database} from  "../src/server/data/db";
 
 //Database Connection go here
 Database.connect('mongodb://api:!AgileRules4#@ds062059.mlab.com:62059/mic-pro').then(() => {
-logger.log("Database is connected")
+logger.log(`Database is connected using the worker is ${pid}`)
 }).catch((error)=>{
   logger.log(error, 'error')
 });
@@ -32,7 +31,7 @@ logger.log("Database is connected")
 // use process.env.PORT to set port when in production
 const port = (process.env.PORT || 3000);
 const app = express();
-
+logger.log(module,'error');
 app.use(compression());
 
 //Set Up app folders
@@ -78,7 +77,7 @@ app.listen(port, function(err) {
   logger.log(`application started on Port:${port}` ,'info');
   if (err) {
     logger.log(err);
-  } else {
-    open('http://localhost:' + port);
   }
 });
+
+
