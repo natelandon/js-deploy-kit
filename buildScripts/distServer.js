@@ -11,7 +11,7 @@ import methodOverride from 'method-override';
 //import other routes
 import moviesRoute from '../src/server/routes/movie';
 import {default as log} from '../src/server/core/logger';
-
+const pid =process.pid;
 //Add logger info
 let logger = new log();
 
@@ -23,7 +23,7 @@ import {default as Database} from  "../src/server/data/db";
 
 //Database Connection go here
 Database.connect('mongodb://api:!AgileRules4#@ds062059.mlab.com:62059/mic-pro').then(() => {
-logger.log("Database is connected")
+logger.log(`Database is connected using the worker is ${pid}`)
 }).catch((error)=>{
   logger.log(error, 'error')
 });
@@ -79,3 +79,5 @@ app.listen(port, function(err) {
     logger.log(err);
   }
 });
+
+
